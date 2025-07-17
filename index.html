@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Booster Kit</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: #4B7BE5;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background: #3A66C1;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .hero {
+      text-align: center;
+      background: #dfe9ff;
+      padding: 80px 20px;
+      border-radius: 20px;
+    }
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    .btn {
+      background: #4B7BE5;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #335bb5;
+    }
+    .features, .plans, .testimonials, .contact, .products {
+      background: white;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      padding: 40px;
+      width: 100%;
+      max-width: 1000px;
+    }
+    .features ul, .plans ul {
+      list-style: none;
+      padding: 0;
+    }
+    .features li, .plans li {
+      margin-bottom: 15px;
+      padding: 12px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border-left: 4px solid #4B7BE5;
+    }
+    .testimonial-box {
+      background: #f1f3f5;
+      padding: 20px;
+      margin: 10px 0;
+      border-left: 5px solid #4B7BE5;
+    }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #3A66C1;
+      color: white;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-card h3 {
+      margin: 10px 0;
+    }
+
+    .product-card p {
+      margin: 5px 0;
+      font-weight: bold;
+      color: green;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+      .hero p {
+        font-size: 16px;
+      }
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+      section {
+        padding: 40px 15px;
+      }
+      .features, .plans, .testimonials, .contact, .products {
+        margin: 15px auto;
+        padding: 25px 20px;
+      }
+      .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+      }
+      .product-card img {
+        height: 150px;
+      }
+      .hero {
+        padding: 50px 15px;
+      }
+      .testimonial-box {
+        font-size: 14px;
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 60px 20px;
+      }
+      .hero h1 {
+        font-size: 32px;
+      }
+      section {
+        padding: 50px 20px;
+      }
+      .features, .plans, .testimonials, .contact, .products {
+        margin: 20px 10px;
+        padding: 30px 25px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 24px;
+      }
+      .hero p {
+        font-size: 14px;
+      }
+      .product-card h3 {
+        font-size: 16px;
+      }
+      .product-card p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <header>
+    <h1>Study Booster Kit 📚</h1>
+    <p>Your all-in-one tool to boost study power!</p>
+  </header>
+
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#plans">Plans</a>
+    <a href="#products">Products</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto;">
+      <div style="flex: 1; min-width: 250px;">
+        <h1>Welcome to the Study Booster Kit</h1>
+        <p>Smart tools, notes, routines & motivation to help you study better.</p>
+        <button class="btn">Get Started</button>
+      </div>
+      <div style="flex: 1; min-width: 250px;">
+        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop" alt="Study Setup" style="max-width: 100%; border-radius: 20px;" />
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <h2>📦 What’s Inside?</h2>
+    <ul>
+      <li>✅ Digital Notes for Fast Revision</li>
+      <li>✅ Study Timetables & Routines</li>
+      <li>✅ Mind Maps & Flashcards</li>
+      <li>✅ Motivation Quotes & Tips</li>
+      <li>✅ Pomodoro Timer App</li>
+      <li> AND MORE .......</li>
+    </ul>
+  </section>
+
+  <section id="plans" class="plans">
+    <h2 style="text-align: center; margin-bottom: 30px;">💰 Choose Your Plan</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+      <div style="background: #f8f9fa; padding: 30px; border-radius: 15px; border: 2px solid #4B7BE5; text-align: center; transition: transform 0.3s;">
+        <h3 style="color: #4B7BE5; margin-bottom: 15px; font-size: 24px;">Free Starter</h3>
+        <p style="margin-bottom: 20px; color: #666;">Basic study materials and one routine template</p>
+        <ul style="list-style: none; padding: 0; margin-bottom: 20px; text-align: left;">
+          <li style="margin-bottom: 8px;">✓ 5 Study templates</li>
+          <li style="margin-bottom: 8px;">✓ Basic timer app</li>
+          <li style="margin-bottom: 8px;">✓ Community access</li>
+        </ul>
+        <div style="font-size: 32px; font-weight: bold; color: #28a745; margin-bottom: 15px;">₹0</div>
+        <button class="btn">Get Started Free</button>
+      </div>
+      <div style="background: linear-gradient(135deg, #4B7BE5, #335bb5); color: rgb(255, 255, 255); padding: 30px; border-radius: 15px; text-align: center; transform: scale(1.05); box-shadow: 0 10px 30px rgba(75, 123, 229, 0.3);">
+        <h3 style="margin-bottom: 15px; font-size: 24px;">Premium Complete ⭐</h3>
+        <p style="margin-bottom: 20px;">Complete study system with all tools and lifetime updates</p>
+        <ul style="list-style: none; padding: 0; margin-bottom: 20px; text-align: left;">
+          <li style="margin-bottom: 8px; color: #000000">✓ All study materials</li>
+          <li style="margin-bottom: 8px; color: #000000">✓ Advanced productivity tools</li>
+          <li style="margin-bottom: 8px; color: #000000">✓ Lifetime updates</li>
+          <li style="margin-bottom: 8px; color: #000000">✓ Priority support</li>
+          <li style="margin-bottom: 8px; color: #000000">✓ Bonus templates</li>
+        </ul>
+        <div style="font-size: 32px; font-weight: bold; margin-bottom: 15px;">₹299</div>
+        <button style="background: #fff; color: #4B7BE5; padding: 12px 25px; border: none; border-radius: 30px; cursor: pointer; font-weight: bold;">Choose Premium</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="products">
+    <h2 style="text-align: center; margin-bottom: 30px;">🛍 Featured Study Products</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://images.meesho.com/images/products/416438954/xmjk0_512.webp" alt="Study Guide Book">
+        <h3>Study Enjoyable Guide</h3>
+        <p>₹99</p>
+      </div>
+
+      <div class="product-card">
+        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSy3eQnVMJxvOPuusBWLk6BGebRuqiTR4iV_WYcghQGruzS1FVhNoLi39tRVJk0yqTei73tgsrt1lg_v5XwrZr9GTmcZjF9aSCNWSLGPFh9YVrR5e65yC5a" alt="Study Techniques Book">
+        <h3>Study Techniques Manual</h3>
+        <p>₹129</p>
+      </div>
+
+      <div class="product-card">
+        <img src="img (9).jpeg" alt="Designer Rulers">
+        <h3>Premium Rulers Set</h3>
+        <p>₹49</p>
+      </div>
+
+      <div class="product-card">
+        <img src="img (1).jpeg" alt="Study Pouch">
+        <h3>Organizer Pouch</h3>
+        <p>₹99</p>
+      </div>
+
+      <div class="product-card">
+        <img src="img (12).jpeg" alt="Geometry Set">
+        <h3>Geometry Triangle Set</h3>
+        <p>₹49</p>
+      </div>
+
+      <div class="product-card">
+        <img src="img (6).jpeg" alt="Desktop Stapler">
+        <h3>Desktop Stapler</h3>
+        <p>₹99</p>
+      </div>
+
+      <div class="product-card">
+        <img src="img (11).jpeg" alt="Spiral Notebook">
+        <h3>Spiral Notebook A4</h3>
+        <p>₹199</p>
+      </div>
+
+      <div class="product-card">
+        <img src="img (2).jpeg" alt="Study Cards">
+        <h3>Pomodoro Study Clock</h3>
+        <p>₹59</p>
+      </div>
+
+      <div class="product-card">
+        <img src="img (4).jpeg" alt="Clipboard with Storage">
+        <h3>Clipboard with Storage</h3>
+        <p>₹399</p>
+      </div>
+
+      <div class="product-card">
+        <img src="img (10).jpeg" alt="Hardcover Notebook">
+        <h3>Premium Hardcover Notebook</h3>
+        <p>₹249</p>
+      </div>
+
+      <div class="product-card">
+        <img src="img (7).jpeg" alt="Highlighter Set">
+        <h3>Multicolor Highlighter Set</h3>
+        <p>₹99</p>
+      </div>
+
+      <div class="product-card">
+        <img src="img (3).jpeg" alt="Scientific Calculator">
+        <h3>Scientific Calculator</h3>
+        <p>₹299</p>
+      </div>
+
+      <div class="product-card">
+        <img src="img (8).jpeg" alt="Writing Pad">
+        <h3>Professional Writing Pad</h3>
+        <p>₹599</p>
+      </div>
+
+      <div class="product-card">
+        <img src="img (5).jpeg" alt="Study Backpack">
+        <h3>Student Backpack</h3>
+        <p>₹899</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <h2 style="text-align: center; margin-bottom: 30px;">🌟 Customer Reviews</h2>
+    <div class="testimonial-box">
+      <p>"The Study Booster Kit helped me organize my study materials effectively. The digital resources are well-curated and the physical products are of excellent quality."</p>
+      <strong>- Riya S., College Student</strong>
+    </div>
+    <div class="testimonial-box">
+      <p>"As a digital marketing project, this showcases excellent e-commerce presentation. The Pomodoro techniques and study tools have genuinely improved my productivity."</p>
+      <strong>- Mehul V., Marketing Professional</strong>
+    </div>
+    <div class="testimonial-box">
+      <p>"Great value for money. The combination of digital and physical study aids creates a comprehensive learning environment."</p>
+      <strong>- Priya K., MBA Student</strong>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 style="text-align: center; margin-bottom: 30px;">📧 Contact Information</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 30px;">
+      <div>
+        <h3 style="margin-bottom: 15px; color: #4B7BE5;">Get in Touch</h3>
+        <div style="margin-bottom: 10px;">
+          <strong>📧 Email:</strong> studybooster@example.com
+        </div>
+        <div style="margin-bottom: 10px;">
+          <strong>📱 Mobile:</strong> +91 98765XXXXX
+        </div>
+        <div style="margin-bottom: 10px;">
+          <strong>📍 Location:</strong> Surat, Gujarat, India
+        </div>
+        <div style="margin-bottom: 10px;">
+          <strong>🕒 Business Hours:</strong> Mon-Fri, 9:00 AM - 6:00 PM
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom: 15px; color: #4B7BE5;">Send us a Message</h3>
+        <form>
+          <input type="text" placeholder="Your Name" required style="margin-bottom: 10px;" />
+          <input type="email" placeholder="Your Email" required style="margin-bottom: 10px;" />
+          <input type="tel" placeholder="Your Phone (Optional)" style="margin-bottom: 10px;" />
+          <textarea placeholder="Your Message" rows="4" style="margin-bottom: 15px;"></textarea>
+          <button class="btn" type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+    <div style="text-align: center; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+  </div>
+  </section>
+
+  <footer>
+    <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+      <p>&copy; 2025 Study Booster Kit | Designed by Arpana </p>
+    </div>
+  </footer>
+
+</body>
+</html>
