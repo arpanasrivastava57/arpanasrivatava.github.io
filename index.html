@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Booster Kit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: #4B7BE5;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      background: #3A66C1;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .hero {
+      text-align: center;
+      background: #dfe9ff;
+      padding: 80px 20px;
+      border-radius: 20px;
+    }
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    .btn {
+      background: #4B7BE5;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #335bb5;
+    }
+    .features, .plans, .testimonials, .contact, .products {
+      background: white;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #ccc;
+      padding: 40px;
+    }
+    .features ul, .plans ul {
+      list-style: none;
+      padding: 0;
+    }
+    .features li, .plans li {
+      margin-bottom: 10px;
+    }
+    .testimonial-box {
+      background: #f1f3f5;
+      padding: 20px;
+      margin: 10px 0;
+      border-left: 5px solid #4B7BE5;
+    }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #3A66C1;
+      color: white;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .product-card h3 {
+      margin: 10px 0;
+    }
+
+    .product-card p {
+      margin: 5px 0;
+      font-weight: bold;
+      color: green;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Study Booster Kit 📚</h1>
+    <p>Your all-in-one tool to boost study power!</p>
+  </header>
+
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#plans">Plans</a>
+    <a href="#products">Products</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 30px;">
+      <div style="flex: 1; min-width: 250px;">
+        <h1>Welcome to the Study Booster Kit</h1>
+        <p>Smart tools, notes, routines & motivation to help you study better.</p>
+        <button class="btn">Get Started</button>
+      </div>
+      <div style="flex: 1; min-width: 250px;">
+        <img src="https://www.netguru.com/hs-fs/hubfs/DALL%C2%B7E%202023-10-30%2009.38.02%20-%20A%20photo%20of%20a%20modern%20home%20office%20setup%20with%20a%20smart%20desk%20lamp%20adjusting%20its%20brightness%20on%20a%20wooden%20desk.%20Beside%20it%2c%20a%20smart%20speaker%20stands%2c%20and%20in%20a%20co.png?width=1200&height=685&name=DALL%C2%B7E%202023-10-30%2009.38.02%20-%20A%20photo%20of%20a%20modern%20home%20office%20setup%20with%20a%20smart%20desk%20lamp%20adjusting%20its%20brightness%20on%20a%20wooden%20desk.%20Beside%20it%2c%20a%20smart%20speaker%20stands%2c%20and%20in%20a%20co.png" alt="Study Booster Kit Image" style="max-width: 100%; border-radius: 20px;" />
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <h2>📦 What’s Inside?</h2>
+    <ul>
+      <li>✅ Digital Notes for Fast Revision</li>
+      <li>✅ Study Timetables & Routines</li>
+      <li>✅ Mind Maps & Flashcards</li>
+      <li>✅ Motivation Quotes & Tips</li>
+      <li>✅ Pomodoro Timer App</li>
+      <li> AND MORE .......</li>
+    </ul>
+  </section>
+
+  <section id="plans" class="plans">
+    <h2>💰 Plans</h2>
+    <ul>
+      <li><strong>Free:</strong> Basic notes, 1 routine, limited access</li>
+      <li><strong>Premium:</strong> All kits, lifetime updates, bonus material</li>
+    </ul>
+  </section>
+
+  <section id="products" class="products">
+    <h2>🛍 Study Boost Items</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://images.meesho.com/images/products/416438954/xmjk0_512.webp" alt="Study Book 1">
+        <h3>Study Enjoyable Guide</h3>
+        <p>₹99</p>
+      </div>
+
+      <div class="product-card">
+        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSy3eQnVMJxvOPuusBWLk6BGebRuqiTR4iV_WYcghQGruzS1FVhNoLi39tRVJk0yqTei73tgsrt1lg_v5XwrZr9GTmcZjF9aSCNWSLGPFh9YVrR5e65yC5a" alt="Study Book 2">
+        <h3>Study Techniques</h3>
+        <p>₹129</p>
+      </div>
+
+ <div class="product-card">
+        <img src="D:\3rd SEM Materials\Digital Marketing\website materials\bd5dcf85-0723-40da-899a-29e7f7a98580.jpeg" alt="Designer Rulers">
+        <h3>Designer Rulers</h3>
+        <p>₹49</p>
+      </div>
+
+<div class="product-card">
+        <img src="D:\3rd SEM Materials\Digital Marketing\website materials\5fb76bc0-0812-4a08-9eda-64575a6b35c4.jpeg" alt="Pouch Bag">
+        <h3>Pouch Bag</h3>
+        <p>₹99</p>
+      </div>
+
+      <div class="product-card">
+        <img src="D:\3rd SEM Materials\Digital Marketing\website materials\Triangle rulers are very useful for drawing….jpeg" alt="Triangle Tools">
+        <h3>Triangle Rulers</h3>
+        <p>₹49</p>
+      </div>
+
+ <div class="product-card">
+        <img src="D:\3rd SEM Materials\Digital Marketing\website materials\1348bd61-eede-4e9d-a252-a541452033e2.jpeg" alt="Stapler">
+        <h3>Cat Stapler</h3>
+        <p>₹99</p>
+      </div>
+
+
+ <div class="product-card">
+        <img src="D:\3rd SEM Materials\Digital Marketing\website materials\download.jpeg" alt="Spiral Notebooks">
+        <h3>Spiral Notebook</h3>
+        <p>₹199</p>
+      </div>
+
+      <div class="product-card">
+        <img src="C:\Users\Arpana\Downloads\7be7844e-a208-46bc-b811-73191b429c9c.jpeg" alt="Pomodoro Card">
+        <h3>Pomodoro Cards</h3>
+        <p>₹59</p>
+      </div>
+
+    </div>
+  </section>
+<section id="products" class="products" style="padding: 60px 20px;">
+  <h2 style="text-align: center; margin-bottom: 40px;">🛍️ Products in the Kit</h2>
+  <div style="
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+  ">
+  
+    <div style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 0 10px #ccc; text-align: center;">
+      <img src="D:\3rd SEM Materials\Digital Marketing\website materials\36c0cbac-4122-4a74-9827-b8e8d5c4277a.jpeg" alt="Clipboard" style="width: 100%; border-radius: 10px;" />
+      <h3>Clipboard with Storage</h3>
+      <p>₹399</p>
+    </div>
+
+    <div style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 0 10px #ccc; text-align: center;">
+      <img src="D:\3rd SEM Materials\Digital Marketing\website materials\Cahier Webnotebook ligné Noir.jpeg" alt="Notebook" style="width: 100%; border-radius: 10px;" />
+      <h3>Hardcover Notebook</h3>
+      <p>₹249</p>
+    </div>
+
+    <div style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 0 10px #ccc; text-align: center;">
+      <img src="D:\3rd SEM Materials\Digital Marketing\website materials\ab247936-4726-4f79-87fc-a7cef01434a6.jpeg" alt="Motivational Poster" style="width: 100%; border-radius: 10px;" />
+      <h3>Multicolour Highlighters</h3>
+      <p>₹99</p>
+    </div>
+
+    <div style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 0 10px #ccc; text-align: center;">
+      <img src="D:\3rd SEM Materials\Digital Marketing\website materials\9c3b64d0-63ef-474a-94f3-cbc7089c36a5.jpeg" alt="Calculator" style="width: 100%; border-radius: 10px;" />
+      <h3>Calculators</h3>
+      <p>₹99</p>
+    </div>
+
+    <div style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 0 10px #ccc; text-align: center;">
+      <img src="D:\3rd SEM Materials\Digital Marketing\website materials\Amazon_com _ Hongri Clipboard with Storage, Folder….jpeg" alt="Multi-Purpose Writing Pad" style="width: 100%; border-radius: 10px;" />
+      <h3>Multi-Purpose Writing Pad</h3>
+      <p>₹599</p>
+    </div>
+
+    <div style="background: white; padding: 20px; border-radius: 15px; box-shadow: 0 0 10px #ccc; text-align: center;">
+      <img src="D:\3rd SEM Materials\Digital Marketing\website materials\277a652e-35fb-42d4-b9e7-b46141d05fae.jpeg" alt="BagPack" style="width: 100%; border-radius: 10px;" />
+      <h3>BagPack</h3>
+      <p>₹599</p>
+    </div>
+
+  </div>
+</section>
+
+</section>
+
+  <section id="testimonials" class="testimonials">
+    <h2>🌟 What Students Say</h2>
+    <div class="testimonial-box">
+      "This kit made my study routine so easy! Loved the mind maps!" – Riya S.
+    </div>
+    <div class="testimonial-box">
+      "Pomodoro timer & Motivational posters are 🔥. Helped me stay focused!" – Mehul V.
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>📧 Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="4"></textarea>
+      <button class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Study Booster Kit | Made with 💙 by Arpana
+  </footer>
+
+</body>
+</html>
